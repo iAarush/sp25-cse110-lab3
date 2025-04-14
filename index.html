@@ -1,47 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Lab 2 starter</title>
-    <meta></meta>
-    <link rel="icon"> </link> <!--link to a favicon-->
+    <title>Red Bull Racing - Team Meeting Minutes</title>
+    <meta charset="UTF-8"></meta>
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
   </head>
   <body>
     <main>
-        <nav> 
+      <nav>
+        <a href="#summary">Summary</a> |
+        <a href="#agenda">Agenda</a> |
+        <a href="#form">Contact</a>
+      </nav>
 
-        </nav>
-        <header>
+      <header>
+        <h1>Red Bull Racing - Post-Quali Debrief</h1>
+        <p>Meeting held on April 13, 2025. Location: Milton Keynes HQ.</p>
+      </header>
 
-        </header>
-        <h1></h1>
-        <h2></h2>
-        <h3></h3>
-        <section>
-            <div>
+      <h2 id="summary">Meeting Summary</h2>
+      <p>Max and Checo discussed tire wear. Engineers shared new data. Strategy team reviewed simulations.</p>
 
-            </div>
-            <hr>
-            <p></p>
-            <ul></ul> <!-- include li tags-->
-            <ol></ol> <!-- include li tags-->
-            <b></b>
-            <strong></strong>
-            <i></i>
-            <em></em>
-            <a></a>
-            <br>
-            <img>
-            <audio> </audio>
-            <video></video>
-            <details></details>
-            <summary></summary>
-        </section>
-        <span>
+      <h3 id="agenda">Agenda</h3>
+      <section>
+        <div>
+          <b>Time:</b> 10:00 AM<br>
+          <strong>Duration:</strong> 30 minutes<br>
+          <i>Moderator:</i> Hannah Schmitz<br>
+          <em>Note taker:</em> Intern 3
+        </div>
 
-        </span>
-        <footer> 
+        <hr>
 
-        </footer>
+        <p>Topics included: tire degradation, pit strategy, and telemetry anomalies.</p>
+
+        <ul>
+          <li>FP3 performance</li>
+          <li>Quali mistakes</li>
+          <li>Weather forecast</li>
+        </ul>
+
+        <ol>
+          <li>Start on softs</li>
+          <li>Box on lap 15</li>
+          <li>Push after VSC</li>
+        </ol>
+
+        <a href="https://www.redbullracing.com/" target="_blank">Team Website</a><br>
+
+        <img src="assets/img/max-checo.png" alt="AI-generated fake image of Max and Checo reviewing data" width="300"><br>
+
+        <audio controls>
+          <source src="assets/audio/IMG_7154.m4a" type="audio/mpeg">
+        </audio><br>
+
+        <video width="320" height="240" controls>
+          <source src="assets/vid/IMG_7154.MOV" type="video/mp4">
+        </video>
+
+        <details>
+          <summary>Click for internal telemetry note</summary>
+          Max's sector 2 delta was +0.15s. Possible lift in Turn 9.
+        </details>
+      </section>
+
+      <h2 id="form">Contact the Pit Wall</h2>
+      <form>
+        <fieldset>
+          <legend>Fan Feedback Form</legend>
+
+          <label for="name">Name:</label>
+          <input type="text" id="name"><br><br>
+
+          <label for="favdriver">Favorite Driver:</label>
+          <input list="drivers" id="favdriver" name="favdriver">
+          <datalist id="drivers">
+            <option value="Max Verstappen">
+            <option value="Sergio Perez">
+          </datalist><br><br>
+
+          <label>Team Radio Quality:</label><br>
+          <input type="radio" id="great" name="radioquality" value="great">
+          <label for="great">Great</label><br>
+          <input type="radio" id="ok" name="radioquality" value="ok">
+          <label for="ok">Okay</label><br><br>
+
+          <label for="race-date">Next Race Date:</label>
+          <input type="date" id="race-date"><br><br>
+
+          <label for="feedback">Message:</label><br>
+          <textarea id="feedback" rows="4" cols="30"></textarea><br><br>
+
+          <label><input type="checkbox"> Subscribe to team updates</label><br><br>
+
+          <label for="merge">Choose your favorite strategy:</label>
+          <select id="merge">
+            <option>One-stop</option>
+            <option>Two-stop</option>
+            <option>Gamble on hards</option>
+          </select><br><br>
+
+          <button type="submit">Send</button>
+        </fieldset>
+      </form>
+
+      <span>This text has a random, blank span around it!</span>
+
+      <footer>
+        <p>&copy; 2025 Red Bull Racing. All rights reserved.</p>
+      </footer>
     </main>
   </body>
 </html>
