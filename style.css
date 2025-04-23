@@ -1,6 +1,214 @@
 /* general setup */
 :root {
     --primary-color: hsl(210, 50%, 40%);
+    --accent: color(display-p3 0.9 0.4 0.1);
+    --hover-color: color-mix(in srgb, orange 40%, red);
+  }
+  
+  /* reset styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 2em;
+  }
+  
+  /* layouts */
+  nav {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  section.highlighted {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  footer {
+    margin-top: 2cm;
+    text-align: center;
+    font-size: 12pt;
+  }
+  
+  /* typography */
+  h2, h3 {
+    color: var(--accent);
+    text-align: center;
+  }
+  
+  p, li {
+    color: darkslategray;
+    line-height: 1.6;
+  }
+  
+  /* borders and box model */
+  img {
+    border-style: solid;
+    border-color: #444;
+    border-width: 2px;
+    border-radius: 8px;
+  }
+  
+  .feedback-box {
+    padding: 2em 3em 2em 3em;
+    margin: 1em auto 1em auto;
+    border: 1px dashed #555;
+    max-width: 600px;
+  }
+  
+  /* longhand margin and padding */
+  header {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* display and positioning */
+  audio, video {
+    display: block;
+    margin: auto;
+  }
+  
+  span {
+    display: inline-block;
+    min-width: 100px;
+    height: 1.5em;
+  }
+  
+  nav a:hover {
+    color: var(--hover-color);
+  }
+  
+  button:active {
+    background-color: red;
+    color: white;
+  }
+  
+  nav {
+    position: sticky;
+    top: 0;
+  }
+  
+  .details-section {
+    position: relative;
+  }
+  
+  /* forms */
+  input[type="text"], textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    font-size: 1rem;
+  }
+  
+  input:focus:has([type="text"]) {
+    border-color: blue;
+  }
+  
+  input[type="radio"]:hover {
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"] {
+    accent-color: var(--primary-color);
+  }
+  
+  /* media query */
+  @media screen and (max-width: 768px) {
+    section.highlighted {
+      grid-template-columns: 1fr;
+    }
+  
+    nav {
+      flex-direction: column;
+    }
+  
+    body {
+      padding: 1em;
+    }
+  }
+  
+  /* selectors */
+  /* id selector */
+  #summary {
+    font-weight: bold;
+  }
+  
+  /* class selector */
+  .summary {
+    background-color: #fff;
+    padding: 1rem;
+    border-left: 4px solid var(--accent);
+  }
+  
+  /* attribute selector */
+  input[type="date"] {
+    background-color: #eee;
+  }
+  
+  /* selector list */
+  h2, h3 {
+    margin-top: 1em;
+  }
+  
+  /* descendant */
+  form fieldset {
+    background-color: #fff;
+  }
+  
+  /* child */
+  main > nav {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* general sibling */
+  hr ~ p {
+    font-style: italic;
+  }
+  
+  /* adjacent sibling */
+  h3 + section {
+    padding-top: 1rem;
+  }
+  
+  /* combined selectors */
+  section.highlighted {
+    border: 2px solid #ccc;
+    padding: 1rem;
+  }
+  
+  /* nested selectors */
+  section {
+    & ul {
+      list-style-type: square;
+    }
+  
+    & ol {
+      list-style-position: inside;
+    }
+  }
+  
+  /* google fonts import */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');  /* general setup */
+:root {
+    --primary-color: hsl(210, 50%, 40%);
     --accent: hsl(20, 80%, 60%);
     @supports (color: color(display-p3 0.9 0.4 0.1)) {
       :root {
